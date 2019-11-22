@@ -1,0 +1,20 @@
+{
+  "name": "strapi-exporter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "strapi-exporter": "./bin/export.js"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "strapi-sdk-javascript": "^0.3.3",
+    "yargs": "^15.0.2"
+  }
+}
