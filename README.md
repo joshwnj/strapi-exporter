@@ -1,7 +1,11 @@
 # strapi-exporter
 
+Export content from [Strapi CMS](https://strapi.io/)
+
+_Sponsored by [X-Team](https://x-team.com)_
+
 ```
-Usage: export.js -u [Strapi URL] -o [Output Directory] -t [Content Type]
+Usage: strapi-exporter -u [Strapi URL] -o [Output Directory] -t [Content Type]
 
 Options:
   --help            Show help                                          [boolean]
