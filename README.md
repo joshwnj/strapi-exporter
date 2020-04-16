@@ -2,8 +2,6 @@
 
 Export content from [Strapi CMS](https://strapi.io/)
 
-_Sponsored by [X-Team](https://x-team.com)_
-
 ```
 Usage: strapi-exporter -u [Strapi URL] -o [Output Directory] -t [Content Type]
 
@@ -21,3 +19,12 @@ Options:
 ## Authenticating
 
 If your `strapi` content is access-protected, you can provide auth details by setting environment variables `STRAPI_USER` and `STRAPI_PASSWORD`.
+
+## License
+
+MIT
+
+-------------------------------------------------------------------------------
+
+_Sponsored by [X-Team](https://x-team.com)_
+
