@@ -9,8 +9,12 @@ async function main (strapi, { outputDir, contentType, filenameFunc }) {
   const itemsDir = path.join(outputDir, contentType)
   await fs.ensureDir(itemsDir)
 
-  await Promise.all(items.map((item) => {
-    const filename = filenameFunc ? filenameFunc(item) : `${item._id}.json`
+  const filenames = items.map((item) => {
+    return filenameFunc ? filenameFunc(item) : `${item._id}.json`
+  })
+
+  await Promise.all(items.map((item, i) => {
+    const filename = filenames[i]
     return fs.writeFile(
       path.join(itemsDir, filename),
       JSON.stringify(item, null, 2),
@@ -18,6 +22,12 @@ async function main (strapi, { outputDir, contentType, filenameFunc }) {
     )
   }))
   
+  await fs.writeFile(
+    path.join(itemsDir, '_index.json'),
+    JSON.stringify(filenames, null, 2),
+    'utf8'
+  )
+
   return items.length
 }
 
